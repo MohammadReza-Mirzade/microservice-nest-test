@@ -6,7 +6,7 @@ import {Ctx, KafkaContext, MessagePattern, Payload} from "@nestjs/microservices"
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @MessagePattern('test')
+  @MessagePattern('quickstart')
   killDragon(@Payload() message, @Ctx() context: KafkaContext) {
     console.log(message);
     console.log(context);
